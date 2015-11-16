@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LACKP Teams</title>
+    <link rel="stylesheet" href="/home.css">
+  </head>
+
+  <body>
+    <h1>
+      <%= @team_name %>
+    </h1>
+
+    <ul>
+      <% @team.players.each do |player| %>
+        <li><%= player.position %>: <%= player.name %></li>
+      <% end %>
+    </ul>
+
+    <a href="/teams">All teams</a>
+  </body>
+</html>

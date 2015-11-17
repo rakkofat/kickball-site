@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Positions - LACKP</title>
-    <link rel="stylesheet" href="home.css">
-  </head>
+<h1>League of Cool Kickball Professions (LACKP) Positions</h1>
 
-  <body>
-    <h1>League of Cool Kickball Professions (LACKP) Positions</h1>
+<ul>
+  <% @positions.each do |position| %>
+    <li><a href="/positions/<%= position %>"><%= position %></a></li>
+  <% end %>
+</ul>
 
-    <ul>
-      <% @positions.each do |position| %>
-        <li><a href="/positions/<%= position %>"><%= position %></a></li>
-      <% end %>
-    </ul>
-
-    <a href="/teams">Teams</a>
-
-  </body>
-</html>
+<a href="/teams">Teams</a>

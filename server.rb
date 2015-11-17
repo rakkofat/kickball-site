@@ -24,7 +24,7 @@ end
 
 get "/teams" do
   @teams = Team.all
-  erb :index
+  erb :index, :layout => :layout
 end
 
 get "/teams/:team_name" do
